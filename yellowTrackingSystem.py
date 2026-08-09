@@ -7,6 +7,10 @@ if not camera.isOpened():
     print("Could not open camera")
     input("Press Enter to exit...")
     exit()
+    
+width = camera.get(cv.CAP_PROP_FRAME_WIDTH)
+height = camera.get(cv.CAP_PROP_FRAME_HEIGHT)
+print(width, "x", height)
 
 while True:
     success, frame = camera.read()
